@@ -1,0 +1,76 @@
+.char-block:nth-of-type(n) {
+/*    background: #eee;
+	background: white;*/
+	background-image:url('../e-images/whitewood.jpg');
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+.char-block{
+	background: #fff;
+	border: 1px solid #c1c0c0;
+	height: 185px;
+	box-shadow: 1px 1px 2px rgba(81, 116, 25, 0.49);
+	margin: 15px 15px 15px 15px;
+	position: relative;
+	display: inline-block;	
+	zoom: 1;	
+	width: 200px;
+	vertical-align: bottom;
+	text-align: center;
+}
+
+.char-helper{
+	vertical-align: middle;
+	display: inline-block;
+	height: 100%;
+}
+
+.char-img{
+	vertical-align: middle;
+}
+
+body
+{
+	background-image: url('../e-images/darkwood.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	background-size: 100%; 
+
+}
+
+.container{
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+
+}
+
+.hoverBlock{
+	background-color: black;
+}
+
+.mainContent{
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 25px;
+	background-color: rgba(255, 255, 255, 0.75);
+	border-radius: 20px;
+}
+
+.footer{
+	position: absolute; 
+	bottom: 0; 
+	width: 100%; 
+	text-align: center;
+	height: 100px;
+	color: white;
+}
+
+body{
+	min-height: 100%;
+	position: relative;
+}
+
