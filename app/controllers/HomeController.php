@@ -17,6 +17,7 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
+		if(Auth::check()) return Redirect::route('home');
 		$data['pageTitle'] = 'Start';
 		return View::make('home.splash', $data);
 	}

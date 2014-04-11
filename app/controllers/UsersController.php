@@ -21,7 +21,7 @@ class UsersController extends BaseController {
 		}
 		else
 		{
-			if (Auth::attempt(array('username'=>Input::get('username'), 'password'=>Input::get('password'))) 
+			if (Auth::attempt(array('username'=>Input::get('username'), 'password'=>Input::get('password')))) 
 			{
    			   return Redirect::route('home');
 			} 

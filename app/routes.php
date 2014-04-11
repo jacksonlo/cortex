@@ -13,8 +13,13 @@
 
 Route::get('/', array('as' => 'splash', 'uses' => 'HomeController@showWelcome'));
 
-Route::get('/home', array('as' => 'home', 'uses' => 'HomeController@showHome'));
+Route::get('/home', array('as' => 'home', 'uses' => 'HomeController@showHome'))->before('auth');
 
-Route::post('/getDetail', array('as' => 'getDetail', 'uses' => 'WordController@getDetail'));
+Route::post('/getDetail', array('as' => 'getDetail', 'uses' => 'WordController@getDetail'))->before('auth');
 
-Route::get('/about', array('as' => 'about', 'uses' => 'HomeController@showAbout'));
+Route::get('/about', array('as' => 'about', 'uses' => 'HomeController@showAbout'))->before('auth');
+
+Route::post('/login', array('as' => 'login', 'uses' => 'UsersController@postLogin'));
+
+Route::get('/logout', array('as' => 'logout', 'uses' => 'UsersController@logout'));
+
