@@ -87,11 +87,13 @@
 			    	<li><a href={{ URL::route('home') }}>Cortex<span class="navbar-unread">1</span></a></li>
 			    	<li><a href={{ URL::route('about') }}>About</a></li>
 			    	<li><a href={{ URL::route('instructions') }}>Instructions</a></li>
+
+			  	</ul>
+				<ul class="nav navbar-nav navbar-right">  
+			    	<li><a href={{ URL::route('home') }}>Regular</a></li>
 			    	<li><a href={{ URL::route('home').'?mode=review' }}>Review</a></li>
 			    	<li><a href={{ URL::route('home').'?mode=slow' }}>Slow Mode</a></li>
-			    	<li><a href={{ URL::route('home').'?mode=overload' }}>Overload</a></li>
-			  	</ul>
-				<ul class="nav navbar-nav navbar-right">           
+			    	<li><a href={{ URL::route('home').'?mode=overload' }}>Overload</a></li>         
   				    <li class="dropdown">
 				      <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }} <b class="caret"></b></a>
 				      <span class="dropdown-arrow"></span>
