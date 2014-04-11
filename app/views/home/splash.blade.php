@@ -24,7 +24,47 @@
 	    <script src="js/jquery.placeholder.js"></script>
 </head>
 
+		<!-- green msg -->
+		@if(Session::has('green-message'))
+			<div class="alert alert-success alert-dismissable" id="session-msg">
+			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				{{ Session::get('green-message') }}
+			</div>
+		@endif
+		<!-- blue msg -->
+		@if(Session::has('blue-message'))
+			<div class="alert alert-info alert-dismissable" id="session-msg">
+			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				{{ Session::get('blue-message') }}
+			</div>
+		@endif
+		<!-- Yellow Msg -->
+		@if(Session::has('yellow-message'))
+			<div class="alert alert-warning alert-dismissable" id="session-msg">
+			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				{{ Session::get('yellow-message') }}
+			</div>
+		@endif
+		<!-- Red msg -->
+		@if(Session::has('red-message'))
+			<div class="alert alert-danger alert-dismissable" id="session-msg">
+			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				{{ Session::get('red-message') }}
+			</div>
+		@endif
+
+		<!-- Red long msg -->
+		@if(Session::has('red-message-long'))
+			<div class="alert alert-danger alert-dismissable" id="session-msg-long">
+			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				{{ Session::get('red-message-long') }}
+			</div>
+		@endif
+
 <body>
+	<div class="register-splash">
+		<a href={{ URL::route('register') }} class="btn btn-primary">Register</a>
+	</div>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="login">

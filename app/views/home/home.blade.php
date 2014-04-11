@@ -19,15 +19,32 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-
-
 <div class="row">
+	<div class="progress">
+	  	<div class="progress-bar" style="width: {{ $progress_width }}%;"></div>
+  		<div class="progress-bar progress-bar-1000" style="width: 25%;"></div>
+  		<div class="progress-bar progress-bar-2500" style="width: 62.5%;"></div>
+	</div>
+<div>
+
+<div class="row" style="text-align: center;">
 @foreach($all as $d)
+	@if(in_array($d->id, $random))
 	<div class="char-block" data-toggle="modal" data-target="#wordModal" id={{ $d->id }}>
 		<span class="char-helper"></span>
 		<img id={{ $d->img }} class="char-img img-rounded" src={{ "./images-png/".$d->img.".png" }}>
 	</div>
+	@endif
 @endforeach
+</div>
+<div class="row" style="padding-bottom: 20px; padding-top: 25px;">
+	@if(!isset($_GET['mode']))
+	<div style="text-align: center;"><a href={{ URL::route('home') }} class="btn btn-success btn-lg" style="width: 70%">Hit</a></div>
+	@elseif($_GET['mode'] == 'review')
+	<div style="text-align: center;"><a href={{ URL::route('home').'?mode=review' }} class="btn btn-success btn-lg" style="width: 70%">Review</a></div>
+	@elseif($_GET['mode'] == 'slow')
+	<div style="text-align: center;"><a href={{ URL::route('home').'?mode=slow' }} class="btn btn-success btn-lg" style="width: 70%">Slow Hit</a></div>
+	@endif
 </div>
 
 @stop

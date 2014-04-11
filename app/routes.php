@@ -25,4 +25,6 @@ Route::get('/logout', array('as' => 'logout', 'uses' => 'UsersController@logout'
 
 Route::post('/know', array('as' => 'know', 'uses' => 'WordController@know'))->before('auth');
 
+Route::get('/register', array('as' => 'register', 'uses' => 'UsersController@register'));
+
 

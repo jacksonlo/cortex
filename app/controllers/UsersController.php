@@ -38,5 +38,11 @@ class UsersController extends BaseController {
 		return Redirect::route('splash');
 	}
 
+	public function register()
+	{
+		$data['pageTitle'] = 'Register';
+		return View::make('home.register', $data);
+	}
+
 
 }

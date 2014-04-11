@@ -2,7 +2,8 @@
 /*    background: #eee;
 	background: white;*/
 	background-image:url('../e-images/whitewood.jpg');
-	background-repeat:no-repeat;
+	background-repeat:repeat;
+	background-attachment:fixed;
 	background-position:center;
 }
 
@@ -33,7 +34,7 @@
 body
 {
 	background-image: url('../e-images/darkwood.jpg');
-	background-repeat:no-repeat;
+	background-repeat: repeat;
 	background-attachment:fixed;
 	background-position:center;
 	background-size: 100%; 
@@ -74,3 +75,30 @@ body{
 	position: relative;
 }
 
+.progress-bar-1000 {
+	background-color: rgba(142, 53, 255, 0.3);
+}
+.progress-bar-2500 {
+	background-color: rgba(189, 156, 179, 0.3);
+}
+
+.register-splash {
+	padding: 15px;
+	z-index: 999;
+	right: 0;
+	position: absolute;
+}
+
+#session-msg{
+	position: absolute;
+	top: 0;
+	z-index: 500;
+	width: 100%;
+}
+
+#session-msg-long{
+	position: absolute;
+	top: 0;
+	z-index: 500;
+	width: 100%;
+}

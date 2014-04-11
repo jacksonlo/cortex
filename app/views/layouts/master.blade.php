@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<!--         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
         @if(isset($csrf_token))
         	<meta name="csrf-token" content="<?= csrf_token() ?>">
     	@endif
@@ -68,7 +68,7 @@
 		@if(Session::has('red-message-long'))
 			<div class="alert alert-danger alert-dismissable" id="session-msg-long">
 			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-				{{ Session::get('red-message') }}
+				{{ Session::get('red-message-long') }}
 			</div>
 		@endif
 
@@ -85,6 +85,8 @@
 				<ul class="nav navbar-nav navbar-left">           
 			    	<li><a href={{ URL::route('home') }}>Cortex<span class="navbar-unread">1</span></a></li>
 			    	<li><a href={{ URL::route('about') }}>About</a></li>
+			    	<li><a href={{ URL::route('home').'?mode=review' }}>Review Mode</a></li>
+			    	<li><a href={{ URL::route('home').'?mode=slow' }}>Slow Mode</a></li>
 			  	</ul>
 				<ul class="nav navbar-nav navbar-right">           
   				    <li class="dropdown">
