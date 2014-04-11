@@ -19,6 +19,8 @@ Route::post('/getDetail', array('as' => 'getDetail', 'uses' => 'WordController@g
 
 Route::get('/about', array('as' => 'about', 'uses' => 'HomeController@showAbout'))->before('auth');
 
+Route::get('/instructions', array('as' => 'instructions', 'uses' => 'HomeController@showInstructions'))->before('auth');
+
 Route::post('/login', array('as' => 'login', 'uses' => 'UsersController@postLogin'));
 
 Route::get('/logout', array('as' => 'logout', 'uses' => 'UsersController@logout'));

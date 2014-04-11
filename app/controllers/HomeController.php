@@ -76,7 +76,7 @@ class HomeController extends BaseController {
 		{
 			if($_GET['mode'] == 'review')
 			{
-				if(count($occur) < 10) return Redirect::route('home')->with('red-message', 'Learn some words before you review!');
+				if(count($occur) < 10) return Redirect::route('home')->with('yellow-message', 'Learn some words before you review!');
 			}
 		}
 
@@ -84,6 +84,8 @@ class HomeController extends BaseController {
 		if(!isset($_GET['mode'])) $new_weight = 25;
 		else if($_GET['mode'] == 'review') $new_weight = 0;
 		else if($_GET['mode'] == 'slow') $new_weight = 10;
+		else if($_GET['mode'] == 'overload') $new_weight = 100;
+		else $new_weight = 25;
 
 		foreach($trad as $char)
 		{
@@ -149,8 +151,13 @@ class HomeController extends BaseController {
 	public function showAbout()
 	{
 		$data['pageTitle'] = 'About';
-
 		return View::make('home.about', $data);
+	}
+
+	public function showInstructions()
+	{
+		$data['pageTitle'] = 'Instructions';
+		return View::make('home.instructions', $data);
 	}
 
 }

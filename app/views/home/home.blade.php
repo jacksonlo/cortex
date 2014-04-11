@@ -43,7 +43,9 @@
 	@elseif($_GET['mode'] == 'review')
 	<div style="text-align: center;"><a href={{ URL::route('home').'?mode=review' }} class="btn btn-success btn-lg" style="width: 70%">Review</a></div>
 	@elseif($_GET['mode'] == 'slow')
-	<div style="text-align: center;"><a href={{ URL::route('home').'?mode=slow' }} class="btn btn-success btn-lg" style="width: 70%">Slow Hit</a></div>
+	<div style="text-align: center;"><a href={{ URL::route('home').'?mode=slow' }} class="btn btn-success btn-lg" style="width: 70%">Slow</a></div>
+	@elseif($_GET['mode'] == 'overload')
+	<div style="text-align: center;"><a href={{ URL::route('home').'?mode=overload' }} class="btn btn-success btn-lg" style="width: 70%">Overload</a></div>
 	@endif
 </div>
 

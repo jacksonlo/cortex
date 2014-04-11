@@ -21,9 +21,8 @@
 		<br>
 		The factors that the weighted probabilities taken into account are:
 		<ol>
-			<li>Time since last review or "I know this word", purpleized.</li>
-			<li>Number of times appeared in all time relative to other characters.</li>
-			<li>Frequence of appearance <i>recently</i> relative to other characters.</li>
+			<li>Time since last review or "I know this word".</li>
+			<li>Frequency of appearance <i>relative</i> to other characters.</li>
 			<li>Time since first learned.</li>
 		</ol>
 

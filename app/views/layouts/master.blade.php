@@ -82,11 +82,14 @@
 			  </button>
 			</div>
 			<div class="collapse navbar-collapse" id="navbar-collapse-01">
-				<ul class="nav navbar-nav navbar-left">           
+				<ul class="nav navbar-nav navbar-left">  
+					<!-- <li><img src={{ url('/e-images/brain.png') }} style="height: 35px; margin-top: 10px; margin-left: 10px;"></li>    -->      
 			    	<li><a href={{ URL::route('home') }}>Cortex<span class="navbar-unread">1</span></a></li>
 			    	<li><a href={{ URL::route('about') }}>About</a></li>
-			    	<li><a href={{ URL::route('home').'?mode=review' }}>Review Mode</a></li>
+			    	<li><a href={{ URL::route('instructions') }}>Instructions</a></li>
+			    	<li><a href={{ URL::route('home').'?mode=review' }}>Review</a></li>
 			    	<li><a href={{ URL::route('home').'?mode=slow' }}>Slow Mode</a></li>
+			    	<li><a href={{ URL::route('home').'?mode=overload' }}>Overload</a></li>
 			  	</ul>
 				<ul class="nav navbar-nav navbar-right">           
   				    <li class="dropdown">
