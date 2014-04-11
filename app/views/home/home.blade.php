@@ -66,7 +66,7 @@ $(document).ready(function()
 
         $(this).bind("mouseout", function() {
         	if(!$(this).hasClass('know')) $(this).css("background", '');
-        	else $(this).css("background", "#9B59B6");
+        	else $(this).css("background", "#2C3E50");
             $(this).find('.char-img').attr('src', './images-png/'+id+'.png');
         })  
 	});
@@ -75,10 +75,30 @@ $(document).ready(function()
 
 	$('.char-block').mousedown(function(e) 
 	{ 
+		var thisID = $(this).attr('id');
 		if( e.button == 2 ) 
 		{ 
-	    	$(this).css("background", "#9B59B6");
-	    	$(this).addClass('know');
+	    	if(!$(this).hasClass('know'))
+	    	{
+		    	$.ajax({
+					type: "POST",
+					url: "{{ URL::route('know') }}",
+					data: {
+						'id' : $(this).attr('id')
+					},
+					dataType: "text",
+					headers: {
+		            	'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+		        	},
+					success: function(data) {
+				    	$('#'+thisID).css("background", "#2C3E50");
+				    	$('#'+thisID).addClass('know');
+					},
+					error: function(data) {
+						alert('Error');
+					}
+				});
+			}
 	      	return false; 
 	    } 
 	   	return true; 

@@ -13,4 +13,20 @@ class WordController extends BaseController {
 		}
 	}
 
+	public function know()
+	{
+		if(Request::ajax())
+		{
+			$id = Input::get('id');
+			$word = Traditional::find($id);
+			if(!is_null($word))
+			{
+				$user = Auth::user();
+				$user->traditionals()->attach($id);
+				return "true";
+			}
+			else return false;
+		}
+	}
+
 }

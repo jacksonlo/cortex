@@ -5,6 +5,12 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
+	public function traditionals()
+	{
+		return $this->belongsToMany('Traditional', 'users_traditionals', 'user_id', 'traditional_id')
+					->withPivot('id', 'created_at');
+	}
+
 	/**
 	 * The database table used by the model.
 	 *

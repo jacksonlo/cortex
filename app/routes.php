@@ -23,3 +23,6 @@ Route::post('/login', array('as' => 'login', 'uses' => 'UsersController@postLogi
 
 Route::get('/logout', array('as' => 'logout', 'uses' => 'UsersController@logout'));
 
+Route::post('/know', array('as' => 'know', 'uses' => 'WordController@know'))->before('auth');
+
+
