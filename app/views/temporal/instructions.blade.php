@@ -3,9 +3,9 @@
 @section('content')
 
 <div class="row mainContent">
-	<h1>Cerebral Instructions</h1>
+	<h1>Instructions</h1>
 	<p class="lead">
-		Cortex Cerebral has 4 modes: Regular, Review, Slow mode and Overload.
+		Cortex-Cerebral has 4 modes: Regular, Review, Slow mode and Overload.
 		<br>
 		Each mode has its strengths and uses for different points in your learning journey.
 	</p>

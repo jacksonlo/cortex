@@ -44,5 +44,11 @@ class UsersController extends BaseController {
 		return View::make('home.register', $data);
 	}
 
+	public function getStats()
+	{
+		$data['pageTitle'] = 'Stats';
+		return View::make('home.stats', $data);
+	}
+
 
 }

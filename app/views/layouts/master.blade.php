@@ -14,24 +14,25 @@
 		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>       
+	    
 	    <!-- Loading Bootstrap -->
-	    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	    {{ HTML::style('bootstrap/css/bootstrap.css') }}
 
 	    <!-- Loading Flat UI -->
-	    <link href="css/flat-ui.css" rel="stylesheet">
+	    {{ HTML::style('css/flat-ui.css') }}
 
-	            {{ HTML::style('css/styles.css') }}
+	    {{ HTML::style('css/styles.css') }}
 
-	    <script src="js/jquery-1.8.3.min.js"></script>
-	    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-	    <script src="js/jquery.ui.touch-punch.min.js"></script>
-	    <script src="js/bootstrap.min.js"></script>
-	    <script src="js/bootstrap-select.js"></script>
-	    <script src="js/bootstrap-switch.js"></script>
-	    <script src="js/flatui-checkbox.js"></script>
-	    <script src="js/flatui-radio.js"></script>
-	    <script src="js/jquery.tagsinput.js"></script>
-	    <script src="js/jquery.placeholder.js"></script>
+	    {{ HTML::script('js/jquery-1.8.3.min.js') }}
+	    {{ HTML::script('js/jquery-ui-1.10.3.custom.min.js') }}
+	    {{ HTML::script('js/jquery.ui.touch-punch.min.js') }}
+	    {{ HTML::script('js/bootstrap.min.js') }}
+	    {{ HTML::script('js/bootstrap-select.js') }}
+	    {{ HTML::script('js/bootstrap-switch.js') }}
+	    {{ HTML::script('js/flatui-checkbox.js') }}
+	    {{ HTML::script('js/flatui-radio.js') }}
+	    {{ HTML::script('js/jquery.tagsinput.js') }}
+	    {{ HTML::script('js/jquery.placeholder.js') }}
 	</head>
 
 	<body>
@@ -86,20 +87,50 @@
 					<!-- <li><img src={{ url('/e-images/brain.png') }} style="height: 35px; margin-top: 10px; margin-left: 10px;"></li>    -->      
 			    	<li><a href={{ URL::route('home') }}>Cortex<span class="navbar-unread">1</span></a></li>
 			    	<li><a href={{ URL::route('about') }}>About</a></li>
-			    	<li><a href={{ URL::route('instructions') }}>Instructions</a></li>
-
+			    	<li class="dropdown">
+				      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cerebral<b class="caret"></b></a>
+				      <span class="dropdown-arrow"></span>
+				      <ul class="dropdown-menu">
+				    	<li><a href={{ URL::route('cerebral') }}>Regular</a></li>
+				    	<li><a href={{ URL::route('cerebral').'?mode=review' }}>Review</a></li>
+				    	<li><a href={{ URL::route('cerebral').'?mode=slow' }}>Slow Mode</a></li>
+				    	<li><a href={{ URL::route('cerebral').'?mode=overload' }}>Overload</a></li> 
+				        <li class="divider"></li>
+				        <li><a href={{ URL::route('cerebral_about') }}>About</a></li>
+				        <li><a href={{ URL::route('cerebral_instructions') }}>Instructions</a></li>
+				      </ul>
+				    </li>
+			    	<li class="dropdown">
+				      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Temporal<b class="caret"></b></a>
+				      <span class="dropdown-arrow"></span>
+				      <ul class="dropdown-menu">
+				    	<li><a href={{ URL::route('temporal') }}>Regular</a></li>
+				    	<li><a href={{ URL::route('temporal').'?mode=review' }}>Review</a></li>
+				    	<li><a href={{ URL::route('temporal').'?mode=slow' }}>Slow Mode</a></li>
+				    	<li><a href={{ URL::route('temporal').'?mode=overload' }}>Overload</a></li> 
+				        <li class="divider"></li>
+				        <li><a href={{ URL::route('temporal_about') }}>About</a></li>
+				        <li><a href={{ URL::route('temporal_instructions') }}>Instructions</a></li>
+				      </ul>
+				    </li>
+			    	<li class="dropdown">
+				      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Exam<b class="caret"></b></a>
+				      <span class="dropdown-arrow"></span>
+				      <ul class="dropdown-menu">
+				    	<li><a href="#">1</a></li>
+				        <li class="divider"></li>
+				        <li><a href="#">About</a></li>
+				        <li><a href="#">Instructions</a></li>
+				      </ul>
+				    </li>
 			  	</ul>
-				<ul class="nav navbar-nav navbar-right">  
-			    	<li><a href={{ URL::route('home') }}>Regular</a></li>
-			    	<li><a href={{ URL::route('home').'?mode=review' }}>Review</a></li>
-			    	<li><a href={{ URL::route('home').'?mode=slow' }}>Slow Mode</a></li>
-			    	<li><a href={{ URL::route('home').'?mode=overload' }}>Overload</a></li>         
+				<ul class="nav navbar-nav navbar-right">          
   				    <li class="dropdown">
 				      <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }} <b class="caret"></b></a>
 				      <span class="dropdown-arrow"></span>
 				      <ul class="dropdown-menu">
 				        <li><a href="#">Settings</a></li>
-				        <li><a href="#">Stats</a></li>
+				        <li><a href={{ URL::route('stats') }}>Stats</a></li>
 				        <li class="divider"></li>
 				        <li><a href={{ URL::route('logout') }}>Logout</a></li>
 				      </ul>
