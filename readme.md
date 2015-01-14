@@ -2,7 +2,7 @@
 Cortex is a web application designed by Jackson Lo to help him in long term memorization of chinese characters.
 
 
-Cortex is **100%** developed for **Jackson Lo** and will be continued to be improved as to his needs. Cortex can be modified for other topics or content which would also benefit from a long term memorization tool.
+Cortex is currently **100%** developed for **Jackson Lo** and will be continued to be improved as to his needs or any other future users. Cortex can be modified for other topics or content which would also benefit from a long term memorization tool.
 
 
 ##Philosphy
