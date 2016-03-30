@@ -64,7 +64,7 @@ class CerebralController extends BaseController {
 		if(!isset($_GET['mode'])) $new_weight = 25;
 		else if($_GET['mode'] == 'review') $new_weight = 0;
 		else if($_GET['mode'] == 'slow') $new_weight = 10;
-		else if($_GET['mode'] == 'overload') $new_weight = 100;
+		else if($_GET['mode'] == 'overload') $new_weight = 140;
 		else $new_weight = 25;
 
 		$new_count = 0;
@@ -79,6 +79,7 @@ class CerebralController extends BaseController {
 				else $all[$char->id] = $new_weight;
 				++$new_count;				
 			}
+			else if(!isset($occur[$char->id])) continue;
 			//10 New Words
 			else if($occur[$char->id] < 1)
 			{
