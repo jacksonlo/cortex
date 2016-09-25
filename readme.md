@@ -1,5 +1,5 @@
 #About Cortex
-Cortex is a web application designed by Jackson Lo to help him in long term memorization of chinese characters.
+Cortex is a web application designed to help in long term memorization of chinese characters.
 
 
 Cortex can be modified for other topics or content which would also benefit from a long term memorization tool.
@@ -9,7 +9,7 @@ Cortex can be modified for other topics or content which would also benefit from
 
 
 ##Philosphy
-Jackson's personal strategy for memorization is best utilized by reviewing previous material while continuing to learn new material. The more Jackson is familiar with a certain character, the less review he needs.
+My personal strategy for memorization is best utilized by reviewing previous material while continuing to learn new material. The more I am familiar with a certain character, the less review I need.
 			
 Therefore, Cortex is designed so that it is based on an algorithm which will take a random selection of **X#** of characters to review.
 		
@@ -40,13 +40,8 @@ The Chinese characters are ordered by their frequency of use, scraped from the o
 
 
 ###Credits
-* All chinese data and images are scraped from <a href="www.learnchineseez.com">Learn Chinese EZ</a>, and I do not take any credit. [This app is for personal use, don't sue me plz :3]
+* All chinese data and images are scraped from <a href="www.learnchineseez.com">Learn Chinese EZ</a>, and I do not take any credit. This app is for personal use only.
 
 
 Please contact <a href="mailto:7jackson.lo@gmail.com?Subject=Cortex%20Inquiry">Jackson Lo</a> for any questions or inquiries.</small>
 
-
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
