@@ -1,3 +1,4 @@
 * text=auto
-public/bootstrap linguist-vendored
+public/bootstrap/* linguist-vendored
 public/css/flat-ui.css linguist-vendored
+public/js/* linguist-vendored
